@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 This research report analzes a sample set of personal movement data using 
 an activity monitoring device.  This device provided data at 5 minute intervals 
 through out the day. The data consists of two months of data from an anonymous 
@@ -74,7 +79,7 @@ g <- ggplot(data=sum_ad, aes(tot)) +
 print(g)            
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 The mean of the total number of steps taken per day is: 
 
@@ -110,7 +115,7 @@ g <- ggplot(data=sum_ad, aes(x=date,y=tot)) +
 print(g)  
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 ## What is the average daily activity pattern?
 To get a view of the typical daily behavior of the person, the following time series plot shows by 5-minute interval averaged across all days.
@@ -127,7 +132,7 @@ g <- ggplot(data=ave_ad, aes(x=interval,y=avesteps)) +
 print(g) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 The following interval has the maximum number of steps across the day typically.
 
@@ -203,7 +208,7 @@ g <- ggplot(data=sum_ad_i, aes(x=date,y=tot)) +
 print(g) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -225,6 +230,6 @@ g <- ggplot(data=ave_ad_i, aes(x=interval,y=avesteps)) +
 print(g) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 A visual inspection indicates that the person tends to start later on the weekend and tends to have the more strenous step count during the week in the morning.  Perhaps they walk to work. 
